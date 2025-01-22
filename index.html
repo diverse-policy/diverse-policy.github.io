@@ -2,14 +2,14 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Diverse Policy Learning via Random Obstacle Deployment for Zero-Shot Adaptation</title>
-
+  <title>Diverse Policy Learning via Random Obstacle Deployment</title>
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
+
 <body>
 
 <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -37,7 +37,16 @@
       <p class="subtitle">IEEE Robotics and Automation Letters (RA-L), 2025</p>
       <div class="content">
         <p><strong>Authors:</strong> Seokjin Choi, Yonghyeon Lee, Seungyeon Kim, Che-Sang Park, Himchan Hwang, Frank C. Park</p>
-        <a href="https://github.com/your-github-repo" class="button is-dark">Code on GitHub</a>
+        <div class="buttons is-centered">
+          <a href="https://arxiv.org/abs/your-paper-link" class="button is-dark">
+            <span class="icon"><i class="fas fa-file-pdf"></i></span>
+            <span>Paper</span>
+          </a>
+          <a href="https://github.com/your-github-repo" class="button is-dark">
+            <span class="icon"><i class="fab fa-github"></i></span>
+            <span>Code on GitHub</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -46,40 +55,52 @@
 <section id="abstract" class="section">
   <div class="container">
     <h2 class="title">Abstract</h2>
-    <p>
-      In this paper, we propose a novel reinforcement learning framework that enables zero-shot policy adaptation in environments with unseen, dynamically changing obstacles. 
-      Adopting the idea that learning a policy capable of generating diverse actions is key to achieving such adaptability, our primary contribution is a novel learning algorithm that incorporates random obstacle deployment, enabling the policy to explore and learn diverse actions. 
-      This method overcomes the limitations of existing diverse policy learning approaches, which primarily rely on mutual information maximization to increase diversity. 
-      Experiments demonstrate that the proposed method generates significantly more diverse actions and adapts better to dynamically changing environments, making it highly effective for tasks with varying constraints such as moving obstacles.
-    </p>
+    <div class="content has-text-justified">
+      <p>
+        Recognizing and manipulating transparent tableware from partial view RGB image observations is made challenging 
+        by the difficulty in obtaining reliable depth measurements of transparent objects. In this paper we present the 
+        Transparent Tableware SuperQuadric Network (T<sup>2</sup>SQNet), a neural network model that leverages a family 
+        of newly extended deformable superquadrics to produce low-dimensional, instance-wise and accurate 3D geometric 
+        representations of transparent objects from partial views. As a byproduct and contribution of independent interest, 
+        we also present TablewareNet, a publicly available toolset of seven parametrized shapes based on our extended 
+        deformable superquadrics, that can be used to generate new datasets of tableware objects of diverse shapes and sizes. 
+        Experiments with T<sup>2</sup>SQNet trained with TablewareNet show that T<sup>2</sup>SQNet outperforms existing methods
+        in recognizing transparent objects, in some cases by significant margins, and can be effectively used in robotic 
+        applications like decluttering and target retrieval.
+      </p>
+    </div>
+    <div class="content has-text-centered">
+      <p><strong>TL;DR:</strong> We propose a diverse policy learning framework leveraging random obstacle deployment for zero-shot adaptation in dynamic environments.</p>
+    </div>
   </div>
 </section>
 
 <section id="components" class="section">
   <div class="container">
-    <h2 class="title">Key Components</h2>
+    <h2 class="title">Core Components</h2>
+    <div class="content">
+      <h3 class="subtitle">1. Policy</h3>
+      <p>
+        Our policy is designed to generate diverse actions in response to dynamically changing environments. It learns from random obstacle deployment during training to create a rich set of action strategies.
+      </p>
 
-    <h3 class="title is-4">1. Policy</h3>
-    <p>
-      The policy is designed to output diverse actions based on latent skills while ensuring adaptability to dynamically changing environments. During training, random obstacle deployment is used to promote exploration and the learning of diverse trajectories. 
-    </p>
+      <h3 class="subtitle">2. Motion Predictor</h3>
+      <p>
+        The motion predictor forecasts state trajectories, enabling the system to evaluate the feasibility of actions in real-time. It ensures safe and effective adaptation to dynamic obstacles.
+      </p>
 
-    <h3 class="title is-4">2. Motion Predictor</h3>
-    <p>
-      The motion predictor forecasts the state trajectory resulting from a given action. This enables the filtering of unsafe actions by predicting which trajectories would violate environmental constraints. 
-    </p>
-
-    <h3 class="title is-4">3. Latent Skill Sampler</h3>
-    <p>
-      A state-dependent latent skill sampler generates diverse skill variables for each state. These skills are used to condition the policy and produce a wide range of actions that can adapt to unseen constraints.
-    </p>
+      <h3 class="subtitle">3. Latent Skill Sampler</h3>
+      <p>
+        The latent skill sampler produces diverse skill variables conditioned on the current state. It leverages state-dependent distributions to enhance adaptability and action diversity.
+      </p>
+    </div>
   </div>
 </section>
 
 <section id="experiments" class="section">
   <div class="container">
     <h2 class="title">Experiments</h2>
-    <p>We conducted experiments in four reinforcement learning environments: Push-T, Ant, Reacher, and Swimmer.</p>
+    <p>We conducted extensive experiments across four reinforcement learning environments: Push-T, Ant, Reacher, and Swimmer.</p>
     <figure>
       <img src="./static/images/experiment_results.png" alt="Experiment Results">
       <figcaption>Performance comparison in unseen environments with dynamically changing obstacles.</figcaption>
