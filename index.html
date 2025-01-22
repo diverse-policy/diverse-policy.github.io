@@ -32,20 +32,87 @@
 
 <section class="hero">
   <div class="hero-body">
-    <div class="container has-text-centered">
-      <h1 class="title">Diverse Policy Learning via Random Obstacle Deployment for Zero-Shot Adaptation</h1>
-      <p class="subtitle">IEEE Robotics and Automation Letters (RA-L), 2025</p>
-      <div class="content">
-        <p><strong>Authors:</strong> Seokjin Choi, Yonghyeon Lee, Seungyeon Kim, Che-Sang Park, Himchan Hwang, Frank C. Park</p>
-        <div class="buttons is-centered">
-          <a href="https://arxiv.org/abs/your-paper-link" class="button is-dark">
-            <span class="icon"><i class="fas fa-file-pdf"></i></span>
-            <span>Paper</span>
-          </a>
-          <a href="https://github.com/your-github-repo" class="button is-dark">
-            <span class="icon"><i class="fab fa-github"></i></span>
-            <span>Code on GitHub</span>
-          </a>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+
+          <!-- Title. -->
+          <h1 class="title">Diverse Policy Learning via Random Obstacle Deployment for Zero-Shot Adaptation</h1>
+          <p class="subtitle">IEEE Robotics and Automation Letters (RA-L), 2025</p>
+
+          <!-- Authors. -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              SeokJin Choi<sup>*, 1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.gabe-yhlee.com">Yonghyeon Lee</a><sup>*, 2</sup>,</span>
+            <span class="author-block">
+              <a href="https://seungyeon-k.github.io">Seungyeon Kim</a><sup>, 1</sup>,</span>              
+            </span>
+            <span class="author-block">
+              Che-Sang Park<sup>1</sup>,</span>
+            <span class="author-block">
+              Himchan Hwang<sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://sites.google.com/robotics.snu.ac.kr/fcp/">Frank C. Park</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Seoul National University,</span>
+            <span class="author-block"><sup>2</sup>Korea Institute For Advanced Study</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>*</sup>Equal contribution</span>
+          </div>
+
+          <!-- Icons. -->
+          <div class="column has-text-centered">
+            <div class="publication-links">
+
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://ieeexplore.ieee.org/document/10847909"
+                    class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/seungyeon-k/T2SQNet-public"
+                    class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+          
+          <!-- Blank. -->
+          <div class="columns is-centered">
+            <div class="content">
+              <h2 class="title is-3"></h2>
+            </div>            
+          </div>
+
+          <!-- TL;DR. -->
+          <div class="columns is-centered has-text-justified interpolation-panel">
+            <div class="column is-full-width">
+              <h2 class="title is-4">
+                <font color="#808080">
+                  <p></p><p></p><p></p>
+                  TL;DR: We propose a diverse policy learning framework leveraging random obstacle deployment for zero-shot adaptation in dynamic environments.
+                </font>
+              </h2>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -57,20 +124,16 @@
     <h2 class="title">Abstract</h2>
     <div class="content has-text-justified">
       <p>
-        Recognizing and manipulating transparent tableware from partial view RGB image observations is made challenging 
-        by the difficulty in obtaining reliable depth measurements of transparent objects. In this paper we present the 
-        Transparent Tableware SuperQuadric Network (T<sup>2</sup>SQNet), a neural network model that leverages a family 
-        of newly extended deformable superquadrics to produce low-dimensional, instance-wise and accurate 3D geometric 
-        representations of transparent objects from partial views. As a byproduct and contribution of independent interest, 
-        we also present TablewareNet, a publicly available toolset of seven parametrized shapes based on our extended 
-        deformable superquadrics, that can be used to generate new datasets of tableware objects of diverse shapes and sizes. 
-        Experiments with T<sup>2</sup>SQNet trained with TablewareNet show that T<sup>2</sup>SQNet outperforms existing methods
-        in recognizing transparent objects, in some cases by significant margins, and can be effectively used in robotic 
-        applications like decluttering and target retrieval.
+        In this paper, we propose a novel reinforcement learning framework that enables zero-shot policy adaptation 
+        in environments with unseen, dynamically changing obstacles. Adopting the idea that learning a policy 
+        capable of generating diverse actions is key to achieving such adaptability, our primary contribution is 
+        a novel learning algorithm that incorporates random obstacle deployment, enabling the policy to explore 
+        and learn diverse actions. This method overcomes the limitations of existing diverse policy learning 
+        approaches, which primarily rely on mutual information maximization to increase diversity. Experiments 
+        demonstrate that the proposed method generates significantly more diverse actions and adapts better to 
+        dynamically changing environments, making it highly effective for tasks with varying constraints such 
+        as moving obstacles.
       </p>
-    </div>
-    <div class="content has-text-centered">
-      <p><strong>TL;DR:</strong> We propose a diverse policy learning framework leveraging random obstacle deployment for zero-shot adaptation in dynamic environments.</p>
     </div>
   </div>
 </section>
