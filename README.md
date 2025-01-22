@@ -1,1 +1,1 @@
-# t2sqnet.github.io
+# diverse-policy.github.io
