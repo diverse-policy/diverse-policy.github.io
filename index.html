@@ -146,15 +146,11 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
-        <!-- <div class="publication-video">
-          <iframe src="https://www.youtube.com"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div> -->
-        <div class="content has-text-centered">
-          <p>
-            Coming soon
-          </p>
-        </div>        
+          <video id="DIVO" autoplay controls muted loop playsinline height="100%">
+            <source src="./assets/videos/DIVO_video.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
       </div>
     </div>
     <!--/ Paper video. -->
@@ -162,35 +158,45 @@
 </section>
 
 <section id="components" class="section">
-  <div class="container">
-    <h2 class="title">Core Components</h2>
-    <div class="content">
-      <h3 class="subtitle">1. Policy</h3>
-      <p>
-        Our policy is designed to generate diverse actions in response to dynamically changing environments. It learns from random obstacle deployment during training to create a rich set of action strategies.
-      </p>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title">Core Components</h2>
+        <div class="content">
+          <h3 class="subtitle">1. Policy</h3>
+          <p>
+            Our policy is designed to generate diverse actions in response to dynamically changing environments. It learns from random obstacle deployment during training to create a rich set of action strategies.
+          </p>
 
-      <h3 class="subtitle">2. Motion Predictor</h3>
-      <p>
-        The motion predictor forecasts state trajectories, enabling the system to evaluate the feasibility of actions in real-time. It ensures safe and effective adaptation to dynamic obstacles.
-      </p>
+          <h3 class="subtitle">2. Motion Predictor</h3>
+          <p>
+            The motion predictor forecasts state trajectories, enabling the system to evaluate the feasibility of actions in real-time. It ensures safe and effective adaptation to dynamic obstacles.
+          </p>
 
-      <h3 class="subtitle">3. Latent Skill Sampler</h3>
-      <p>
-        The latent skill sampler produces diverse skill variables conditioned on the current state. It leverages state-dependent distributions to enhance adaptability and action diversity.
-      </p>
+          <h3 class="subtitle">3. Latent Skill Sampler</h3>
+          <p>
+            The latent skill sampler produces diverse skill variables conditioned on the current state. It leverages state-dependent distributions to enhance adaptability and action diversity.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="experiments" class="section">
-  <div class="container">
-    <h2 class="title">Experiments</h2>
-    <p>We conducted extensive experiments across four reinforcement learning environments: Push-T, Ant, Reacher, and Swimmer.</p>
-    <figure>
-      <img src="./static/images/experiment_results.png" alt="Experiment Results">
-      <figcaption>Performance comparison in unseen environments with dynamically changing obstacles.</figcaption>
-    </figure>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title">Experiments</h2>
+        <p>We conducted extensive experiments across four reinforcement learning environments: Push-T, Ant, Reacher, and Swimmer.</p>
+        <div class="columns">
+          <div class="column has-text-centered">
+            <img src="./assets/images/results_v4.PNG"
+                 alt="experimental results"/>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
